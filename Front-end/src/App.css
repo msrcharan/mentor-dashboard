@@ -1,0 +1,215 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #d0d0d0; /* Light gray base text */
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif; /* New font */
+}
+
+/* App Container */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2c2c2c;
+  padding: 1.5rem 2rem; /* Increased padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-brand {
+  font-size: 2rem; /* Larger branding */
+  font-weight: 600;
+}
+
+.nav-brand-link {
+  color: #00e676; /* Neon green */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-brand-link:hover {
+  color: #00c853; /* Slightly darker green on hover */
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem; /* Wider spacing */
+  align-items: center;
+}
+
+.nav-link {
+  color: #b0b0b0; /* Medium gray */
+  text-decoration: none;
+  font-size: 1.2rem; /* Larger links */
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00e676;
+  background-color: rgba(0, 230, 118, 0.1); /* Subtle green highlight */
+}
+
+.btn-logout {
+  background-color: #ff1744; /* Red for logout */
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-logout:hover {
+  background-color: #d81b60;
+  transform: scale(1.05); /* Slight scale on hover */
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Page Container (for Home and others) */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #252525;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Titles */
+.page-title {
+  color: #00e676; /* Neon green */
+  font-size: 2.5rem; /* Large title */
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.section-title {
+  color: #00e676;
+  font-size: 1.75rem; /* Medium title */
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* Text */
+.error-text {
+  color: #ff1744;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.loading-text {
+  color: #b0b0b0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.no-data {
+  color: #b0b0b0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Mentor List (for Home page) */
+.mentor-list {
+  margin-top: 2rem;
+}
+
+.mentor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.mentor-card {
+  background-color: #303030;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.mentor-card:hover {
+  transform: translateY(-5px);
+}
+
+.mentor-name {
+  color: #e0e0e0; /* Bright gray */
+  font-size: 1.25rem; /* Medium size */
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.mentor-expertise {
+  color: #a0a0a0; /* Darker gray */
+  font-size: 1rem; /* Standard size */
+  font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-brand {
+    font-size: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  .btn-logout {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .mentor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}

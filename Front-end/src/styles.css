@@ -1,0 +1,46 @@
+nav {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+  }
+  
+  nav a, nav button {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  nav a:hover, nav button:hover {
+    background-color: #ddd;
+  }
+  
+  .chat-container {
+    margin: 20px;
+  }
+  
+  .chat-window {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .user { color: blue; }
+  .bot { color: green; }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 20px auto;
+  }
+  
+  input, select, button {
+    padding: 8px;
+  }
